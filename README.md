@@ -11,7 +11,7 @@ git clone https://github.com/alesniewska/Methyl.git
 ```
 ## Configuration
 
-Before running the pipeline, change the paths to the directories in the right place in the file Snakefile.
+Before running workflows, change the paths to the directories in the right place in the Snakefile.
 
 For example:
 
@@ -24,7 +24,7 @@ GENOME_ANNOTATION_PATH = DIR + "genome_ann/GRCh37.75.gtf"
 SAMPLES, = glob_wildcards(SAMPLE_PATH + "{sample}_1.fastq")
 #--------------------------------------------------------------------
 ```
-You need to load the appropriate modules in the file snakemake.sbatch. 
+You need to load the appropriate modules in the snakemake.sbatch file. 
 
 ```bash
 # load all modules
@@ -40,7 +40,7 @@ All system requirements have been saved in the requirements.txt file in the appr
 
 ## Running snakemake pipeline
 
-Choose the directory that contains all required Python scripts the configured snakemake.sbatch and Snakefile files run:
+Choose the directory that contains all required Python scripts, then configured snakemake.sbatch and Snakefile files and run:
 ```
 sbatch snakemake.sbatch
 ```
@@ -56,7 +56,7 @@ sbatch snakemake.sbatch
 ## Make table count
 
 After running pipeline you get result files which contain Geneid, chromosome, start, end, strand, length, and numer of mapping reads (RNA-seq) or percentage of methylated CpGs in each island (RRBS-seq).
-If you want to get a csv file, which contains only  Geneid and numer of mapping reads or percentage of methylated CpGs you can use the table_count.py
+If you want to get a csv file, which contains only Geneid and numer of mapping reads or percentage of methylated CpGs you can use the table_count.py
 
 ```
 python table_count.py <path to *.cnt files> <output files>
@@ -85,7 +85,7 @@ CpGislandFind.py <path to FASTA file> <optional arguments>
 1. Find distance between CpG in sequence and calculate median of distances
 2. If distance between CpG is shorter than calculated median distance add CpG to pre-island
 3. Select pre-island which is biggest or equal than minimal CpGisland length 
-4. If sum of C% and G% is biggest than minimal value and Obs/Exp is biggest than minimal value write CpGisland
+4. If sum of C% and G% is biggest than minimal length value and Obs/Exp is biggest than minimal value write CpGislands to output file
 
 ![alt text](https://github.com/alesniewska/Methyl/blob/master/images/obs_exp.jpg?raw=true)
 
