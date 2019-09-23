@@ -36,7 +36,7 @@ module load samtools/1.2
 module load subread/1.5.2
 ```
 Make sure your cluster contains the required modules. If your cluster doesn't contain all needed modules you have to install missing packages and set path in right place in Snakefile rules.
-All system requirements have been saved in the requirements.txt file in the appropriate directories.
+All Python requirements have been saved in the requirements.txt file in the appropriate directories.
 
 ## Running snakemake pipeline
 
@@ -84,8 +84,8 @@ CpGislandFind.py <path to FASTA file> <optional arguments>
 
 1. Find distance between CpG in sequence and calculate median of distances
 2. If distance between CpG is shorter than calculated median distance add CpG to pre-island
-3. Select pre-island which is biggest or equal than minimal CpGisland length 
-4. If sum of C% and G% is biggest than minimal length value and Obs/Exp is biggest than minimal value write CpGislands to output file
+3. Select pre-island which is bigger or equal than minimal CpGisland length 
+4. If sum of C% and G% is bigger than minimal length value and Obs/Exp is bigger than minimal value write CpGislands to output file
 
 ![alt text](https://github.com/alesniewska/Methyl/blob/master/images/obs_exp.jpg?raw=true)
 
