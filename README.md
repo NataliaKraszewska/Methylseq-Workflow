@@ -1,7 +1,7 @@
 # RNA-seq and RRBS-seq snakemake pipelines
 
-[Sanakemake](https://bitbucket.org/snakemake/snakemake/src/master/) is a workflow management system which allows to create analysis pipelines.
-Snakemake pipelines were written for analyzing RNA-seq and RRBS-seq data for paired-end and single-end reads 
+[Snakemake](https://bitbucket.org/snakemake/snakemake/src/master/) is a workflow management system which allows to create analysis workflows.
+Snakemake pipelines were written for analyzing RNA-seq and RRBS data for paired-end and single-end reads.
 Workflows were created to be able to run on a cluster with [SLURM](https://slurm.schedmd.com/quickstart.html) management system.
 
 ## Installation
