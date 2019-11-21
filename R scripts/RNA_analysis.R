@@ -37,7 +37,7 @@ ggplot(df, aes(x = value, colour = variable)) + ylim(c(0, 0.25)) +
 #wykres MDS pokazujacy jak próbki się grupują 
 plotMDS(dgeFull)
 
-############################## ANALIZA RÓŻNICOWA ##################################
+############################# ANALIZA RÓŻNICOWA #################################
 
 directory <- getwd()
 #załaduj dane
