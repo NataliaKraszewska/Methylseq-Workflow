@@ -7,7 +7,7 @@ Workflows were created to be able to run on a cluster with [SLURM](https://slurm
 ## Installation
 
 ```
-git clone https://github.com/NataliaKraszewska/Methyl.git
+git clone https://github.com/NataliaKraszewska/Methylseq-Workflow.git
 ```
 ## Configuration
 
